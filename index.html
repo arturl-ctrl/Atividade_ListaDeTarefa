@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+</head>
+<body>
+
+  <h1>Lista de Tarefas</h1>
+  <p>Pressione: (fn F12) para ver suas tarefas.</p>
+
+  <script>
+
+    let minhaAgenda = [
+      "08h - Estudar",
+      "10h - Reunião de equipe",
+      "12h - Almoçar",
+      "14h - Responder e-mails",
+      "16h - Ir à academia",
+      "18h - Fazer compras",
+      "20h - Ler um livro"
+    ];
+    console.log("Passo 1 - Agenda inicial:", minhaAgenda);
+
+    
+    console.log(`Passo 2 - Você tem ${minhaAgenda.length} tarefas pendentes.`);
+
+    
+    minhaAgenda.push("09h - Resolver problema urgente");
+    console.log("Passo 3 - Tarefa urgente adicionada:", minhaAgenda);
+
+    
+    minhaAgenda.sort();
+    console.log("Passo 4 - Agenda organizada:", minhaAgenda);
+
+    
+    let primeiraConcluida = minhaAgenda.shift();
+    console.log(`Passo 5 - Primeira tarefa concluída (${primeiraConcluida}). Agenda atual:`, minhaAgenda);
+
+    
+    let ultimaDesistida = minhaAgenda.pop();
+    console.log(`Passo 6 - Desistiu da última tarefa (${ultimaDesistida}). Agenda atual:`, minhaAgenda);
+
+    
+    let tarefaMeioRemovida = minhaAgenda.splice(2, 1);
+    console.log(`Passo 7 - Tarefa do meio removida (${tarefaMeioRemovida}). Agenda final:`, minhaAgenda);
+  </script>
+
+</body>
+</html>
